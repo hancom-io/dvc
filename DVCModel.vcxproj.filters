@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="CheckList">
+      <UniqueIdentifier>{430265ff-16b6-4077-a2a8-0219b5f40f9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OWPMLReader">
+      <UniqueIdentifier>{c776a7c6-9157-42ac-95ed-8eaac96684f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="export">
+      <UniqueIdentifier>{a547e0e8-577c-4ed8-8ba2-382d31e72c75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DVCOutput">
+      <UniqueIdentifier>{b218dc6d-6f8c-4021-bc07-dcbfa1de6dec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Checker.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DVCInterface.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DVCModule.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CBullet.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CCharShape.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CheckList.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\COutlineShape.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CParaNumBullet.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CParaShape.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CHyperlink.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CSpecialCharacter.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CStyle.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CTable.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\JsonModel.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\OWPMLReader.h">
+      <Filter>OWPMLReader</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\RCharShape.h">
+      <Filter>OWPMLReader</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\RParaShape.h">
+      <Filter>OWPMLReader</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\RTable.h">
+      <Filter>OWPMLReader</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="export\export.h">
+      <Filter>export</Filter>
+    </ClInclude>
+    <ClInclude Include="export\ExportInterface.h">
+      <Filter>export</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ReaderUtil.h">
+      <Filter>OWPMLReader</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ROutlineShape.h">
+      <Filter>OWPMLReader</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\RBullets.h">
+      <Filter>OWPMLReader</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CMacro.h">
+      <Filter>CheckList</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandParser.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DVCDefine.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DVCOutputJson.h">
+      <Filter>DVCOutput</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DVCErrorInfo.h">
+      <Filter>DVCOutput</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Checker.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DVCModule.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CBullet.cpp">
+      <Filter>CheckList</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CCharShape.cpp">
+      <Filter>CheckList</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CheckList.cpp">
+      <Filter>CheckList</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\COutlineShape.cpp">
+      <Filter>CheckList</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CParaNumBullet.cpp">
+      <Filter>CheckList</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CParaShape.cpp">
+      <Filter>CheckList</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CHyperlink.cpp">
+      <Filter>CheckList</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CSpecialCharacter.cpp">
+      <Filter>CheckList</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CStyle.cpp">
+      <Filter>CheckList</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CTable.cpp">
+      <Filter>CheckList</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\OWPMLReader.cpp">
+      <Filter>OWPMLReader</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RCharShape.cpp">
+      <Filter>OWPMLReader</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RParaShape.cpp">
+      <Filter>OWPMLReader</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RTable.cpp">
+      <Filter>OWPMLReader</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ReaderUtil.cpp">
+      <Filter>OWPMLReader</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ROutlineShape.cpp">
+      <Filter>OWPMLReader</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RBullets.cpp">
+      <Filter>OWPMLReader</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CMacro.cpp">
+      <Filter>CheckList</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandParser.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DVCOutputJson.cpp">
+      <Filter>DVCOutput</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DVCErrorInfo.cpp">
+      <Filter>DVCOutput</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LICENSE" />
+    <None Include="README.md" />
+    <None Include="update_oss.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="NOTICE.txt" />
+  </ItemGroup>
+</Project>
