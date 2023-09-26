@@ -21,7 +21,6 @@
 #include "OWPML\OWPML.h"
 #include "OWPML\OwpmlForDec.h"
 #include "OWPMLApi\OWPMLApi.h"
-#include "OWPMLApi\OWPMLUtils.h"
 #include "OWPMLUtil\HncCtrlChDef.h"
 
 class ReaderUtil
@@ -34,5 +33,6 @@ public:
     static std::wstring s2ws(const std::string& str);
     static std::string ws2s(const std::wstring& wstr);
     static bool    findInVector(std::vector<UINT> obj, UINT value);
+	static LPCWSTR ProcessingTextElement(OWPML::CT* pText);
 };
 

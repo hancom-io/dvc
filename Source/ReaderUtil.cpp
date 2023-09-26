@@ -124,3 +124,94 @@ bool ReaderUtil::findInVector(std::vector<UINT> obj, UINT value)
 
     return false;
 }
+
+LPCWSTR ReaderUtil::ProcessingTextElement(OWPML::CT* pText)
+{
+	if (pText == NULL) {
+		return L"";
+	}
+
+	std::wstring text, buff;
+	UINT i = 0, j = 0, count = 0, len = 0;
+	OWPML::Objectlist* pChildList = pText->GetObjectList();
+	OWPML::CObject* pObject = NULL;
+
+	if (pChildList) { // (#PCDATA | TITLEMARK | TAB | LINEBREAK | HYPEN | NBSPACE | FWSPACE)*
+		count = (UINT)pChildList->size();
+		for (i = 0; i < count; i++) {
+			pObject = pChildList->at(i);
+			if (pObject) {
+				switch (pObject->GetID())
+				{
+				case ID_PARA_Char:
+				{
+					OWPML::CChar* pChar = (OWPML::CChar*)pObject;
+					text.empty();					
+					text.assign(pChar->Getval());
+					buff.empty();					
+					len = text.size();
+					for (j = 0; j < len; j++) {
+						if (text.at(j) != HWPCH_LINE_BREAK && text.at(j) != HWPCH_PARA_BREAK && text.at(j) != HWPCH_TAB)							
+							buff += text.at(j);
+					}
+					text.assign(buff);
+					break;
+				}
+				case ID_PARA_TitleMark:
+				{
+					text.empty();
+					break;
+				}
+				case ID_PARA_Tab:
+				{
+					text.empty();
+					text.assign(1, static_cast<WCHAR>(HWPCH_TAB));
+					break;
+				}
+				case ID_PARA_LineBreak:
+				{
+					text.empty();
+					text.assign(1, static_cast<WCHAR>(HWPCH_LINE_BREAK));
+					break;
+				}
+				case ID_PARA_Hypen:
+				{
+					text.empty();
+					text.assign(1, static_cast<WCHAR>(HWPCH_HYPHEN));
+					break;
+				}
+				case ID_PARA_FwSpace:
+				{
+					text.empty();
+					text.assign(1, static_cast<WCHAR>(HWPCH_FIXED_WIDTH_SPACE));
+					break;
+				}
+				case ID_PARA_NbSpace:
+				{
+					text.empty();
+					text.assign(1, static_cast<WCHAR>(HWPCH_NON_BREAKING_SPACE));
+					break;
+				}
+				case ID_PARA_MarkpenBegin:
+				{
+					text.empty();
+					break;
+				}
+				case ID_PARA_MarkpenEnd:
+				{
+					text.empty();
+					break;
+				}
+				default:
+					text.empty();
+					break;
+				}
+			}
+
+			if (text.size() > 0) {
+				return text.c_str();
+			}
+		} // for
+	}
+	return L"";
+}

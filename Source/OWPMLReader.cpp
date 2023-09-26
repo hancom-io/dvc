@@ -329,7 +329,7 @@ namespace OWPMLReaderModule {
 
                             if (t)
                             {
-                                pInfo->text = OWPML::COwpmlUtils::ProcessingTextElement(t);
+                                pInfo->text = ReaderUtil::ProcessingTextElement(t);
                             }
                             pInfo->charPrIDRef = pRunType->GetCharPrIDRef();
                             pInfo->paraPrIDRef = prarPrIDRef;
